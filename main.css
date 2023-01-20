@@ -1,0 +1,66 @@
+:root { /* css 가상 클래스 -> var() 하고 괄호 안에서 이 root 클래스 안에 넣었던 것들 사용 가능*/
+        /* 반드시 color 이름 앞에 -- 붙여줘야 함! */
+    --accent_color: #f3ff87;
+    --text_color: #f0f4f5;
+    --background_color: black;
+    --green_color: rgb(120, 236, 66);
+}
+
+.body {
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+a {
+    text-decoration: none;
+    color: var(--text_color);
+}
+
+.navbar {
+    display: flex; /* navigation bar를 가로 형태로 하기 위해 추가함 */ 
+    justify-content: space-between; /* 양 옆 여백 지정 */
+    align-items: center; /* 가운데 정렬 */
+    background-color: var(--background_color);
+    padding: 8px 12px;
+}
+
+.nav_logo {
+    font-size: 24px;
+    color: var(--text_color);
+}
+
+.nav_logo i {
+    color: var(--accent_color);
+}
+
+.nav_logo span{
+    color:var(--green_color);
+}
+
+.nav_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav_menu li {
+    padding: 8px 12px;
+}
+
+.nav_menu li:hover {
+    color: var(--background_color);
+    background-color: var(--accent_color);
+    border-radius: 4px;
+}
+  
+.nav_menu li a:hover {
+    color: var(--background_color);
+}
+
+.navbar_toggleBtn {
+    display: none;
+    color:var(--text_color);
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+}
